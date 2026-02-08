@@ -7,23 +7,15 @@ import cardsInfo from "../../cards_info.json";
  */
 export function processCards() {
   try {
-    // Get base path from Vite config (defaults to "/" if not set)
-    const basePath = import.meta.env.BASE_URL || "/";
-    
+    // Use Vite's base URL so assets work in dev and production (e.g. GitHub Pages)
+    const base = (import.meta.env.BASE_URL || "/").replace(/([^/])$/, "$1/");
+    const assetsBase = `${base}assets/images/`;
+
     const processedCards = cardsInfo.map((card) => {
-      // Remove "../" prefix and construct path with base
-      const imagePath = card.image.replace(/^\.\.\//, "");
-      // Ensure path starts with base path
-      const fullPath = imagePath.startsWith('/') 
-        ? `${basePath}${imagePath.slice(1)}` 
-        : `${basePath}${imagePath}`;
-      
-      // Use import.meta.url to resolve relative to the module
-      // From src/scripts/utils/cards.js, go up to project root
-      const baseUrl = new URL("../../../", import.meta.url).href;
+      const filename = card.image.replace(/^.*\//, "");
       return {
         ...card,
-        image: new URL(fullPath, baseUrl).href,
+        image: `${assetsBase}${filename}`,
       };
     });
     // Duplicate each card to create pairs for the memory game
@@ -58,13 +50,11 @@ export function createCardElement(card, coverImage) {
 }
 
 /**
- * Gets the cover image URL
+ * Gets the cover image URL (public/assets/images/ - served at base in production)
  */
 function getCoverImageUrl() {
-  const basePath = import.meta.env.BASE_URL || "/";
-  const baseUrl = new URL("../../../", import.meta.url).href;
-  const imagePath = `${basePath}assets/images/cover.svg`;
-  return new URL(imagePath, baseUrl).href;
+  const base = (import.meta.env.BASE_URL || "/").replace(/([^/])$/, "$1/");
+  return `${base}assets/images/cover.svg`;
 }
 
 /**
