@@ -2,12 +2,12 @@
 
 A browser-based memory-matching game built with vanilla JavaScript, featuring a modular architecture, limited-attempt gameplay, card flip animations, and toast notifications with confetti on win.
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](#)
-[![Live Preview](https://img.shields.io/badge/Live_Preview-Demo-green?logo=github-pages)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/Ammar-Taha/memory-card-game)
+[![Live Preview](https://img.shields.io/badge/Live_Preview-Demo-green?logo=github-pages)](https://ammar-taha.github.io/memory-card-game/)
 
 ## 🌐 Live Preview
 
-Experience the game in action: **[View Live Demo](#)** *(add your GitHub Pages URL when the repo is published)*
+Experience the game in action: **[View Live Demo](https://ammar-taha.github.io/memory-card-game/)**
 
 ## 📋 Table of Contents
 
@@ -182,9 +182,9 @@ Memory Card Game/
 
 ### Installation
 
-1. **Clone the repository** (when available):
+1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Ammar-Taha/memory-card-game.git
    cd memory-card-game
    ```
 
