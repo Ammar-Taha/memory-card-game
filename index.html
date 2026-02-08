@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory Card Game</title>
+    <script type="module" crossorigin src="/memory-card-game/assets/index-B_1_Faqw.js"></script>
+    <link rel="stylesheet" crossorigin href="/memory-card-game/assets/index-BNMiNKn9.css">
+  </head>
+  <body>
+    <main class="memory-container">
+      <div class="memory-app">
+        <header class="memory-app__header">
+          <h1>
+            <span class="memory-app__title">Memory Match</span>
+            <span class="memory-app__badge">Card Game</span>
+          </h1>
+          <p class="memory-app__subtitle">
+            Find matching pairs by flipping cards. Test your memory skills!
+          </p>
+          <div class="memory-app__stats">
+            <span class="memory-app__pill" role="status">
+              <span class="memory-app__pill-dot" aria-hidden="true"></span>
+              Attempts Remaining: <span class="tries-remaining"></span>
+            </span>
+          </div>
+        </header>
+        <section class="memory-app__game">
+          <div class="card-grid"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
