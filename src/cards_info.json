@@ -1,0 +1,26 @@
+[
+  {
+    "image": "../assets/images/1.star.svg",
+    "name": "star"
+  },
+  {
+    "image": "../assets/images/2.heart.svg",
+    "name": "heart"
+  },
+  {
+    "image": "../assets/images/3.diamond.svg",
+    "name": "diamond"
+  },
+  {
+    "image": "../assets/images/4.circle.svg",
+    "name": "circle"
+  },
+  {
+    "image": "../assets/images/5.square.svg",
+    "name": "square"
+  },
+  {
+    "image": "../assets/images/6.triangle.svg",
+    "name": "triangle"
+  }
+]
